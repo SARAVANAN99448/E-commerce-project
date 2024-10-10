@@ -1,5 +1,5 @@
 import { CiSearch } from "react-icons/ci";
-import { FiShoppingCart } from "react-icons/fi";
+import { FiShoppingCart} from "react-icons/fi";
 import { CiUser } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 const Navbar = () => {
@@ -17,7 +17,7 @@ const Navbar = () => {
                     </ul>
                 </nav>
                 <div className="hidden md:block">
-                   <div className="bg-[#F0F0F0]  border  flex items-center rounded-xl w-[600px] p-3">
+                   <div className="bg-[#F0F0F0]  border  flex items-center rounded-3xl w-[600px] p-3">
                    <i><CiSearch size={20} className="mr-2"/></i>
                    <div className=" ">
                     <input 
@@ -29,8 +29,8 @@ const Navbar = () => {
                    </div>
                 </div>
                 <div className="flex ml-10 gap-[50%]">
-                    <i><FiShoppingCart/></i>
-                    <i><CiUser/></i>
+                    <i><FiShoppingCart size={20}/></i>
+                    <i><CiUser size={20}/></i>
                 </div>
             </div>
         </section>
