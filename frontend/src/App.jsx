@@ -9,7 +9,6 @@ import PlaceOrder from "./pages/PlaceOrder"
 import Orders from "./pages/Orders"
 import Discount from "./components/Discount"
 import Navbar from "./components/Navbar"
-<<<<<<< HEAD
 import Casuals from "./pages/Casuals"
 import Formal from "./pages/Formal"
 import Party from "./pages/Party"
@@ -35,23 +34,5 @@ const App = () => {
             </Routes>
         </div>
     )
-=======
-import Newarrivals from "./components/Newarrivals"
-import {BrowserRouter,Routes,Route} from "react-router-dom"
-import Signup from "./components/Signup"
-import Topselling from "./components/Topselling"
-import Dresssstyle from "./components/Dressstyle"
-
-const App = ()=>{
-return(<>
-<BrowserRouter>
-<Routes>
-    <Route path="/" element={<><Discount/><Navbar/><Newarrivals/><Topselling/></>}></Route>
-    <Route path="/signup" element={<Signup/>}></Route>
-</Routes>
-</BrowserRouter>
-
-</>)
->>>>>>> 1b2568b9061b5f3a4f6747d35c2d21de48f9dd09
 }
 export default App
