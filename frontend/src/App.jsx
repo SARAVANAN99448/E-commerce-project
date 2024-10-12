@@ -1,19 +1,38 @@
+import React from "react"
+import { Routes, Route } from "react-router-dom"
+import Home from "./pages/Home"
+import Onsale from "./pages/Onsale"
+import Product from "./pages/Product"
+import Cart from "./pages/Cart"
+import Login from "./pages/Login"
+import PlaceOrder from "./pages/PlaceOrder"
+import Orders from "./pages/Orders"
 import Discount from "./components/Discount"
-import Login from "./components/Login"
 import Navbar from "./components/Navbar"
-import Newarrivals from "./components/Newarrivals"
-import {BrowserRouter,Routes,Route} from "react-router-dom"
-import Signup from "./components/Signup"
+import Casuals from "./pages/Casuals"
+import Formal from "./pages/Formal"
+import Party from "./pages/Party"
+import Gym from "./pages/Gym"
 
-const App = ()=>{
-return(<>
-<BrowserRouter>
-<Routes>
-    <Route path="/" element={<><Discount/><Navbar/><Newarrivals/></>}></Route>
-    <Route path="/signup" element={<Signup/>}></Route>
-</Routes>
-</BrowserRouter>
-
-</>)
+const App = () => {
+    return (
+        <div>
+            <Discount />
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/on-sale" element={<Onsale />} />
+                <Route path="/product:productID" element={<Product />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/place-order" element={<PlaceOrder />} />
+                <Route path="/orders" element={<Orders />} />
+                <Route path="/casual" element={<Casuals />} />
+                <Route path="/formal" element={<Formal />} />
+                <Route path="/party" element={<Party />} />
+                <Route path="/gym" element={<Gym />} />
+            </Routes>
+        </div>
+    )
 }
 export default App
