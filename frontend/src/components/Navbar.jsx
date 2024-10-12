@@ -85,7 +85,7 @@ const Navbar = () => {
                     </span>
                 </div>
 
-                {/* Cart and User icons */}
+                {/* Cart and  icons */}
                 <div className="flex items-center space-x-6">
                     <NavLink to="/cart" className="text-gray-800 hover:text-gray-500">
                         <FiShoppingCart className="h-6 w-6" />
