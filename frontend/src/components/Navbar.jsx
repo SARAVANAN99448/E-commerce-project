@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FiSearch, FiShoppingCart, FiUser, FiMenu, FiX } from 'react-icons/fi';
+import { FiSearch, FiShoppingCart, FiUser, FiMenu, FiX, FiChevronDown} from 'react-icons/fi';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isShopMenuOpen, setIsShopMenuOpen] = useState(false);
 
     // Toggle mobile menu
     const handleMobileMenuToggle = () => {
@@ -16,13 +15,9 @@ const Navbar = () => {
         setIsMobileMenuOpen(false);
     };
 
-    // Toggle shop dropdown menu on desktop
-    const handleShopMenuToggle = () => {
-        setIsShopMenuOpen(!isShopMenuOpen);
-    };
 
     return (
-        <nav className="bg-white shadow-sm relative">
+        <nav className="bg-white shadow-sm sticky top-0 z-50">
             <div className="container mx-auto px-4 py-3 flex items-center justify-between">
                 {/* Hamburger menu for mobile (visible on small screens) */}
                 <div className="md:hidden flex items-center">
@@ -32,21 +27,25 @@ const Navbar = () => {
                 </div>
 
                 {/* Logo */}
-                <div className="text-3xl font-bold tracking-tight">
-                    SHOP.CO
+                <div className="text-3xl font-bold tracking-tight font-integral">
+                    <NavLink to="/">
+                    SHOP.CO 
+                    </NavLink>                    
                 </div>
 
                 {/* Desktop Menu (hidden on mobile) */}
-                <div className="hidden md:flex flex-grow mx-8 items-center justify-center space-x-10">
-                    <div className="relative">
-                        <button
-                            onClick={handleShopMenuToggle}
-                            className="text-gray-800 hover:underline flex items-center"
-                        >
-                            Shop <span className="ml-1">&#9662;</span> {/* Downward triangle for dropdown */}
-                        </button>
-                        {isShopMenuOpen && (
-                            <div className="absolute mt-2 bg-white shadow-md rounded-md p-2 space-y-2 z-50">
+                <div className="hidden md:flex flex-grow mx-8 items-center justify-center space-x-10 ">
+                <div className="group realtive">
+                        <div className='flex items-center gap-1'>
+                            <div>
+                                Shop
+                            </div>
+                            <div className='pt-1'>
+                                <FiChevronDown />
+                            </div>
+                        </div>
+                        <div className='group-hover:block hidden absolute dropdown-menu left-50 pt-4'>
+                            <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded'>
                                 <NavLink to="/casual" className="block text-gray-700 hover:underline">
                                     Casual
                                 </NavLink>
@@ -60,7 +59,7 @@ const Navbar = () => {
                                     Gym
                                 </NavLink>
                             </div>
-                        )}
+                        </div>
                     </div>
                     <NavLink to="/on-sale" className="text-gray-800 hover:underline">
                         On Sale
@@ -74,7 +73,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Search input */}
-                <div className="hidden md:flex flex-grow-0 w-1/3 relative">
+                <div className="hidden md:flex flex-grow-0 w-1/3 pr-4 relative">
                     <input
                         type="text"
                         placeholder="Search for products..."
@@ -87,12 +86,22 @@ const Navbar = () => {
 
                 {/* Cart and  icons */}
                 <div className="flex items-center space-x-6">
+                    <NavLink to="/onsale" className="text-gray-800 hover:text-gray-500 md:hidden">
+                        <FiSearch className="h-6 w-6" />
+                    </NavLink>
                     <NavLink to="/cart" className="text-gray-800 hover:text-gray-500">
                         <FiShoppingCart className="h-6 w-6" />
                     </NavLink>
-                    <NavLink to="/profile" className="text-gray-800 hover:text-gray-500">
+                    <div className="group realtive">
                         <FiUser className="h-6 w-6" />
-                    </NavLink>
+                        <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
+                            <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded'>
+                                <p className='cursor-pointer hover:text-black'>My profile</p>
+                                <p className='cursor-pointer hover:text-black'>Orders</p>
+                                <p className='cursor-pointer hover:text-black'>Logout</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -104,8 +113,7 @@ const Navbar = () => {
             {/* Mobile sliding menu (visible on small screens) */}
             <div
                 className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
-                    } ease-in-out duration-300`}
-            >
+                    } ease-in-out duration-300`}>
                 <div className="p-4 flex justify-between items-center">
                     <span className="text-xl font-bold">Menu</span>
                     <button onClick={handleCloseMobileMenu} className="text-gray-800">
@@ -161,3 +169,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+

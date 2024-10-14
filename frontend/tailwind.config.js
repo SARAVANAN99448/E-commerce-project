@@ -2,7 +2,12 @@
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        integral: ['"Integral CF"', 'sans-serif'],
+        paragraph: ['Satoshi'], // For paragraphs
+      },
+    },
   },
   plugins: [],
 }
