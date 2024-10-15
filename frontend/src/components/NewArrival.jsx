@@ -5,15 +5,12 @@ import ProductItem from './ProductItem'
 
 const NewArrival = () => {
 
-    const {products} = useContext(ShopContext)
-    const {newProducts, setnewProducts} = useState([]);
-
-    console.log(products);
-    
+    const {products} = useContext(ShopContext);
+    const [newProducts, setnewProducts] = useState([]);
 
     useEffect(()=>{
-        setnewProducts(products.slice(0,5))
-    },[])
+        setnewProducts(products.slice(0,4))
+    },[products])
 
     return (
         <div className='my-10'>
@@ -23,12 +20,13 @@ const NewArrival = () => {
 
         {/* Rendering products */}
 
-        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6'></div>
+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 gap-y-6 p-4 lg:pl-20'>
             {
                 newProducts.map((item,index)=>(
                     <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price}/>
                 ))
             }
+            </div>
         </div>
     )
 }
