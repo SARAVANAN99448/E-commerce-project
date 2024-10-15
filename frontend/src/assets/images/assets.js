@@ -34,7 +34,7 @@ export const products = [
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
-        topselling: true
+        topselling: false
     },
     {
         _id: "aaaab",
@@ -56,7 +56,7 @@ export const products = [
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
-        topselling: true
+        topselling: false
     },
     {
         _id: "aaaad",
@@ -74,11 +74,11 @@ export const products = [
         name: "Men Round Neck Pure Cotten T-shirt",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 260,
-        image: [product4],
+        image: [product2],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
-        topselling: true
+        topselling: false
     },
     {
         _id: "aaaadg",
@@ -96,18 +96,18 @@ export const products = [
         name: "Men Round Neck Pure Cotten T-shirt",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 260,
-        image: [product4],
+        image: [product3],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
-        topselling: true
+        topselling: false
     },
     {
         _id: "aaaady",
         name: "Men Round Neck Pure Cotten T-shirt",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 260,
-        image: [product4],
+        image: [product1],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
@@ -118,11 +118,11 @@ export const products = [
         name: "Men Round Neck Pure Cotten T-shirt",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 260,
-        image: [product4],
+        image: [product2],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
-        topselling: true
+        topselling: false
     },
     {
         _id: "aaaadr",
@@ -144,6 +144,6 @@ export const products = [
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
-        topselling: true
+        topselling: false
     }
 ]
