@@ -9,6 +9,10 @@ import brandlogo2 from "./brandlogo2.png"
 import brandlogo3 from "./brandlogo3.png"
 import brandlogo4 from "./brandlogo4.png"
 import brandlogo5 from "./brandlogo5.png"
+import casual from "./casual.png"
+import formal from "./formal.png"
+import party from "./party.png"
+import gym from "./gym.png"
 
 export const assets = {
     hero_img,
@@ -21,7 +25,11 @@ export const assets = {
     brandlogo2,
     brandlogo3,
     brandlogo4,
-    brandlogo5
+    brandlogo5,
+    casual,
+    formal,
+    party,
+    gym
 }
 
 export const products = [
