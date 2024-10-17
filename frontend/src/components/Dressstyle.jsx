@@ -2,7 +2,7 @@ import { assets } from "../assets/images/assets"
 
 const Dresssstyle = () => {
     return (<>
-        <section className="mb-96">
+        <section className="">
             <div className="bg-[#F0F0F0] md:m-20 m-10 md:p-0 p-5 rounded-3xl ">
                 <h1 className="text-4xl font-bold text-center pt-10">BROWSE BY DERSS STYLE</h1>
                 <div className="">
