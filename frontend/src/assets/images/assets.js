@@ -24,7 +24,7 @@ import casual from "./casual.png"
 import formal from "./formal.png"
 import party from "./party.png"
 import gym from "./gym.png"
-
+import greentick from "./check.png"
 export const assets = {
     hero_img,
     hero_img2,
@@ -51,15 +51,16 @@ export const assets = {
     casual,
     formal,
     party,
-    gym
+    gym,
+    greentick
 }
 
 export const products = [
     {
         _id: "aaaaa",
-        name: "Men Round Neck Pure Cotten T-shirt",
+        name: "T-SHIRT WITH TAPE DETAILS",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
-        price: 260,
+        price:120,
         image: [product1],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
@@ -68,9 +69,9 @@ export const products = [
     },
     {
         _id: "aaaab",
-        name: "Men Round Neck Pure Cotten T-shirt",
+        name: "Skinny Fit Jeans",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
-        price: 260,
+        price:240,
         image: [product2],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
@@ -79,9 +80,9 @@ export const products = [
     },
     {
         _id: "aaaac",
-        name: "Men Round Neck Pure Cotten T-shirt",
+        name: "checkered Shirt",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
-        price: 260,
+        price: 180,
         image: [product3],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
@@ -90,7 +91,7 @@ export const products = [
     },
     {
         _id: "aaaad",
-        name: "Men Round Neck Pure Cotten T-shirt",
+        name: "Sleeve Striped T-shirt",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 260,
         image: [product4],
@@ -199,3 +200,5 @@ export const products = [
         topselling: false
     }
 ]
+
+
