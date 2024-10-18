@@ -2,6 +2,11 @@ import React from 'react';
 import { FaTwitter, FaFacebookF, FaInstagram, FaGithub, FaEnvelope } from 'react-icons/fa'; // Social Icons
 
 const Footer = () => {
+
+    const onSubmitHandler = (event)=> {
+        event.preventDefault();
+    }
+
     return (
         <>
             <div className='relative'>
@@ -14,17 +19,19 @@ const Footer = () => {
 
                         {/* Input and Button Section */}
                         <div className="flex flex-col w-full md:w-1/2 space-y-4">
-                            <div className="relative">
-                                <FaEnvelope className="absolute left-4 top-1/2 transform -translate-y-1/2 text-black" />
-                                <input
-                                    type="email"
-                                    placeholder="Enter your email address"
-                                    className="w-full px-12 py-3 rounded-full bg-white text-black outline-none"
-                                />
-                            </div>
-                            <button className="w-full px-6 py-3 rounded-full bg-white text-black font-bold">
-                                Subscribe to Newsletter
-                            </button>
+                            <form onSubmit={onSubmitHandler} className='flex flex-col gap-4'>
+                                <div className="relative">
+                                    <FaEnvelope className="absolute left-4 top-1/2 transform -translate-y-1/2 text-black" />
+                                    <input
+                                        type="email"
+                                        placeholder="Enter your email address"
+                                        className="w-full px-12 py-3 rounded-full bg-white text-black outline-none" required
+                                    />
+                                </div>
+                                <button className="w-full px-6 py-3 rounded-full bg-white text-black font-bold">
+                                    Subscribe to Newsletter
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </div>

@@ -13,6 +13,7 @@ import Casuals from "./pages/Casuals"
 import Formal from "./pages/Formal"
 import Party from "./pages/Party"
 import Gym from "./pages/Gym"
+import Footer from "./components/Footer"
 
 const App = () => {
     return (
@@ -32,6 +33,7 @@ const App = () => {
                 <Route path="/party" element={<Party />} />
                 <Route path="/gym" element={<Gym />} />
             </Routes>
+            <Footer/>
         </div>
     )
 }
