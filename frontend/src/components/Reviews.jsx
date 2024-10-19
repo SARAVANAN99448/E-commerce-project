@@ -79,7 +79,6 @@ const Review = () => {
                     <h1 className="text-4xl font-bold md:text-start md:ml-20 text-center">
                         OUR HAPPY CUSTOMERS
                     </h1>
-
                     <div className="m-10">
                         <Slider {...settings}>
                             {data.map((data, index) => (
