@@ -35,6 +35,37 @@ import casual7 from "./casual7.jpg"
 import casual8 from "./casual8.jpg"
 import casual9 from "./casual9.jpg"
 import casual10 from "./casual10.jpg"
+import formal1 from "./formal1.jpg"
+import formal2 from "./formal2.jpg"
+import formal3 from "./formal3.jpg"
+import formal4 from "./formal4.jpg"
+import formal5 from "./formal5.jpg"
+import formal6 from "./formal6.jpg"
+import formal7 from "./formal7.jpg"
+import formal8 from "./formal8.jpg"
+import formal9 from "./formal9.jpg"
+import formal10 from "./formal10.jpg"
+import party1 from "./party1.jpg"
+import party2 from "./party2.jpg"
+import party3 from "./party3.jpg"
+import party4 from "./party4.jpg"
+import party5 from "./party5.jpg"
+import party6 from "./party6.jpg"
+import party7 from "./party7.jpg"
+import party8 from "./party8.jpg"
+import party9 from "./party9.jpg"
+import party10 from "./party10.jpg"
+import gym1 from "./gym1.jpg"
+import gym2 from "./gym2.jpg"
+import gym3 from "./gym3.jpg"
+import gym4 from "./gym4.jpg"
+import gym5 from "./gym5.jpg"
+import gym6 from "./gym6.jpg"
+import gym7 from "./gym7.jpg"
+import gym8 from "./gym8.jpg"
+import gym9 from "./gym9.jpg"
+import gym10 from "./gym10.jpg"
+
 export const assets = {
     hero_img,
     hero_img2,
@@ -73,6 +104,36 @@ export const assets = {
     casual8,
     casual9,
     casual10,
+    formal1,
+    formal2,
+    formal3,
+    formal4,
+    formal5,
+    formal6,
+    formal7,
+    formal8,
+    formal9,
+    formal10,
+    party1,
+    party2,
+    party3,
+    party4,
+    party5,
+    party6,
+    party7,
+    party8,
+    party9,
+    party10,
+    gym1,
+    gym2,
+    gym3,
+    gym4,
+    gym5,
+    gym6,
+    gym7,
+    gym8,
+    gym9,
+    gym10,
 }
 
 export const products = [
@@ -134,6 +195,9 @@ export const products = [
         pre_price: "$160",
         rating: "4.5"
     },
+
+    // Casual products
+
     {
         _id: "aaaadd",
         name: "VERTICAL STRIPED SHIRT",
@@ -287,14 +351,302 @@ export const products = [
         discount: "-20%",
         pre_price: "$232",
         rating: "5.0"
-    }
-    , 
+    }, 
+
+    // formal products
+
     {
         _id: "aaaaduyiuz",
         name: "COURAGE GRAPHIC T-SHIRT",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 80,
-        image: [],
+        image: [formal1],
+        category: "formal",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [formal2],
+        category: "formal",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [formal3],
+        category: "formal",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [formal4],
+        category: "formal",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [formal5],
+        category: "formal",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [formal6],
+        category: "formal",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [formal7],
+        category: "formal",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [formal8],
+        category: "formal",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [formal9],
+        category: "formal",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [formal10],
+        category: "formal",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+
+    // party products
+
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [party1],
+        category: "party",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [party2],
+        category: "party",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [party3],
+        category: "party",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [party4],
+        category: "party",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [party5],
+        category: "party",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [party6],
+        category: "party",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [party7],
+        category: "party",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [party8],
+        category: "party",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [party9],
+        category: "party",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [party10],
+        category: "party",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+
+    // gym products
+
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [gym1],
         category: "gym",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
@@ -302,6 +654,133 @@ export const products = [
         discount: "",
         pre_price: "",
         rating: "3.0"
-    }
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [gym2],
+        category: "gym",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [gym3],
+        category: "gym",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [gym4],
+        category: "gym",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [gym5],
+        category: "gym",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [gym6],
+        category: "gym",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [gym7],
+        category: "gym",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [gym8],
+        category: "gym",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [gym9],
+        category: "gym",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    {
+        _id: "aaaaduyiuz",
+        name: "COURAGE GRAPHIC T-SHIRT",
+        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
+        price: 80,
+        image: [gym10],
+        category: "gym",
+        sizes: ["Small", "Medium", "Large", "X-Large"],
+        date: 8392834757123,
+        topselling: false,
+        discount: "",
+        pre_price: "",
+        rating: "3.0"
+    },
+    
 ]
 

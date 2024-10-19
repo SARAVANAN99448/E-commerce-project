@@ -11,7 +11,7 @@ const Topselling = () => {
     useEffect(() => {
         const topProduct = products.filter((item) => (item.topselling))
         setTopSelling(topProduct.slice(0, 4))
-    }, [])
+    }, [products])
 
     return (
         <div className='w-full m-auto md:w-[90%] my-10'>
