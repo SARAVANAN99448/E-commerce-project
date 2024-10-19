@@ -4,9 +4,9 @@ import Title from "./Title"
 const Dresssstyle = () => {
     return (<>
         <section className="">
-            <div className="bg-[#F0F0F0] md:m-20 m-10 md:p-0 p-5 rounded-3xl ">
+            {/* <div className="bg-[#F0F0F0] md:m-20 m-10 md:p-0 p-5 rounded-3xl ">
                 <h1 className="text-4xl font-bold text-center pt-10">BROWSE BY DERSS STYLE</h1>
-                </div>
+                </div> */}
             <div className="bg-[#F0F0F0] md:m-20 m-4 md:p-0 p-5 rounded-3xl ">
                 <div className="text-center text-3xl py-8 px-4">
                 <Title text1={"BROWSE BY DRESS STYLE"}/>
