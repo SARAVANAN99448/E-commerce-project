@@ -4,6 +4,17 @@ import product1 from './product1.png'
 import product2 from './product2.png'
 import product3 from './product3.png'
 import product4 from './product4.png'
+import product5 from './product5.png'
+import product6 from './product6.png'
+import product7 from './product7.png'
+import product8 from './product8.png'
+import product9 from './product9.png'
+import product10 from './product10.png'
+import product11 from './product11.png'
+import product12 from './product12.png'
+import product13 from './product13.png'
+import product13_1 from './product13_1.png'
+import product13_2 from './product13_2.png'
 import brandlogo1 from "./brandlogo1.png"
 import brandlogo2 from "./brandlogo2.png"
 import brandlogo3 from "./brandlogo3.png"
@@ -31,6 +42,17 @@ export const assets = {
     product2,
     product3,
     product4,
+    product5,
+    product6,
+    product7,
+    product8,
+    product9,
+    product10,
+    product11,
+    product12,
+    product13,
+    product13_1,
+    product13_2,
     brandlogo1,
     brandlogo2,
     brandlogo3,

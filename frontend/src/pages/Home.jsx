@@ -5,7 +5,6 @@ import NewArrival from '../components/NewArrival'
 import Topselling from '../components/Topselling'
 import Dresssstyle from '../components/Dressstyle'
 import Review from '../components/Reviews'
-import Footer from '../components/Footer'
 
 const Home = () => {
     return (
@@ -16,7 +15,6 @@ const Home = () => {
         <Topselling/>
         <Dresssstyle/>
         <Review/>
-        <Footer/>
         </>
     )
 }
