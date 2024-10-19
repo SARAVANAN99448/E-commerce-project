@@ -30,11 +30,11 @@ import casual2 from "./casual2.png"
 import casual3 from "./casual3.png"
 import casual4 from "./casual4.png"
 import casual5 from "./casual5.png"
-import casual6 from "./casual6.png"
-import casual7 from "./casual7.png"
-import casual8 from "./casual8.png"
-import casual9 from "./casual9.png"
-import top4 from "./top4.png"
+import casual6 from "./casual6.jpg"
+import casual7 from "./casual7.jpg"
+import casual8 from "./casual8.jpg"
+import casual9 from "./casual9.jpg"
+import casual10 from "./casual10.jpg"
 export const assets = {
     hero_img,
     hero_img2,
@@ -71,7 +71,8 @@ export const assets = {
     casual6,
     casual7,
     casual8,
-    casual9
+    casual9,
+    casual10,
 }
 
 export const products = [
@@ -81,7 +82,7 @@ export const products = [
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 120,
         image: [product1],
-        category: "casual",
+        category: "",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
         topselling: false,
@@ -95,7 +96,7 @@ export const products = [
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 240,
         image: [product2],
-        category: "casual",
+        category: "",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
         topselling: false,
@@ -111,7 +112,7 @@ export const products = [
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 180,
         image: [product3],
-        category: "casual",
+        category: "",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
         topselling: false,
@@ -125,7 +126,7 @@ export const products = [
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 260,
         image: [product4],
-        category: "casual",
+        category: "",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
         topselling: false,
@@ -138,7 +139,7 @@ export const products = [
         name: "VERTICAL STRIPED SHIRT",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 212,
-        image: [casual7],
+        image: [casual1],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
@@ -152,7 +153,7 @@ export const products = [
         name: "COURAGE GRAPHIC T-SHIRT",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 145,
-        image: [casual8],
+        image: [casual2],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
@@ -166,7 +167,7 @@ export const products = [
         name: "LOOSE FIT BERMUDA SHORTS",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 80,
-        image: [casual9],
+        image: [casual3],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
@@ -180,8 +181,8 @@ export const products = [
         name: "FADED SKINNY JEANS",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 210,
-        image: [top4],
-        category: "casual",
+        image: [product8],
+        category: "",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
         topselling: true,
@@ -194,12 +195,11 @@ export const products = [
         name: "Gradient Graphic T-shirt",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 145,
-        image: [casual1],
+        image: [casual4],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
         topselling: false,
-        casualdress: true,
         discount: "",
         pre_price: "",
         rating: "3.5"
@@ -209,12 +209,11 @@ export const products = [
         name: "Polo with Tipping Details",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 180,
-        image: [casual2],
+        image: [casual5],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
         topselling: false,
-        casualdress: true,
         discount: "",
         pre_price: "",
         rating: "4.5"
@@ -224,12 +223,11 @@ export const products = [
         name: "Black Striped T-shirt",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 260,
-        image: [casual3],
+        image: [casual6],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
         topselling: false,
-        casualdress: true,
         discount: "-30%",
         pre_price: "$150",
         rating: "5.0"
@@ -239,12 +237,11 @@ export const products = [
         name: "SKINNY FIT JEANS",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 240,
-        image: [casual4],
+        image: [casual7],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
         topselling: false,
-        casualdress: true,
         discount: "-20%",
         pre_price: "$260",
         rating: "3.5"
@@ -254,12 +251,11 @@ export const products = [
         name: "CHECKERED SHIRT",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 180,
-        image: [casual5],
+        image: [casual8],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
         topselling: false,
-        casualdress: true,
         discount: "",
         pre_price: "",
         rating: "4.5"
@@ -269,12 +265,11 @@ export const products = [
         name: "SLEEVE STRIPED T-SHIRT",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 130,
-        image: [casual6],
+        image: [casual9],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
         topselling: false,
-        casualdress: true,
         discount: "-30%",
         pre_price: "$160",
         rating: "4.5"
@@ -284,42 +279,26 @@ export const products = [
         name: "VERTICAL STRIPED SHIRT",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 212,
-        image: [casual7],
+        image: [casual10],
         category: "casual",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
         topselling: false,
-        casualdress: true,
         discount: "-20%",
         pre_price: "$232",
         rating: "5.0"
     }
-    , {
-        _id: "aaaaduyiuz",
-        name: "COURAGE GRAPHIC T-SHIRT",
-        description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
-        price: 212,
-        image: [casual8],
-        category: "casual",
-        sizes: ["Small", "Medium", "Large", "X-Large"],
-        date: 8392834757123,
-        topselling: false,
-        casualdress: true,
-        discount: "",
-        pre_price: "",
-        rating: "4.0"
-    }
-    , {
+    , 
+    {
         _id: "aaaaduyiuz",
         name: "COURAGE GRAPHIC T-SHIRT",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 80,
-        image: [casual9],
-        category: "casual",
+        image: [],
+        category: "gym",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
         topselling: false,
-        casualdress: true,
         discount: "",
         pre_price: "",
         rating: "3.0"
