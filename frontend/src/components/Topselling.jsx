@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import Title from './Title'
 import ProductItem from './ProductItem'
+import { Link } from 'react-router-dom'
 
 const Topselling = () => {
 
@@ -28,7 +29,9 @@ const Topselling = () => {
                 </div>
             </div>
             <div className='w-full m-auto text-center my-8'>
+                <Link to='/on-sale'>
                 <button className='border border-gray-200 py-4 px-16 rounded-full hover:text-white hover:bg-black transition ease-out '>View All</button>
+                </Link>
             </div>
         </div>
     )

@@ -14,12 +14,14 @@ import Formal from "./pages/Formal"
 import Party from "./pages/Party"
 import Gym from "./pages/Gym"
 import Footer from "./components/Footer"
+import SearchBar from "./components/SearchBar"
 
 const App = () => {
     return (
         <div>
             <Discount />
             <Navbar />
+            <SearchBar />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/on-sale" element={<Onsale />} />

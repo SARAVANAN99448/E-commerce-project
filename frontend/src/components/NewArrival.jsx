@@ -14,7 +14,7 @@ const NewArrival = () => {
     }, [products])
 
     return (
-        <div className='w-full m-auto md:w-[90%] my-10 border-b-2'>
+        <div className='w-full m-auto md:w-[90%] my-10 border-b-2 ' id='newArrival'>
             <div className='text-center py-8 text-3xl'>
                 <Title text1={"NEW ARRIVALS"} />
             </div>
