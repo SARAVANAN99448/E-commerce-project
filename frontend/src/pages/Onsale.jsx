@@ -8,7 +8,8 @@ const Onsale = () => {
     const { products } = useContext(ShopContext);
     const [onsaleProducts, setOnsaleProducts] = useState([]);
 
-
+    
+    
 
     useEffect(() => {
         setOnsaleProducts(products.slice(0, 9))
