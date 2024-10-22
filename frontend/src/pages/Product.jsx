@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { ShopContext } from '../context/ShopContext';
 import { useParams } from 'react-router-dom';
-import Title from "../components/Title"
 import RelatedProducts from '../components/RelatedProducts';
 
 const reviewsData = [
@@ -67,9 +66,8 @@ const faqs = [
 const Product = () => {
 
     const { productID } = useParams()
-    console.log(productID);
 
-    const { products, currency } = useContext(ShopContext);
+    const { products, currency, addToCart } = useContext(ShopContext);
     const [productData, setProductData] = useState(false);
     const [image, setImage] = useState('')
     const [size, setSize] = useState('')

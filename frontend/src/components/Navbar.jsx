@@ -6,6 +6,7 @@ import { ShopContext } from '../context/ShopContext';
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+
     // Toggle mobile menu
     const handleMobileMenuToggle = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -16,7 +17,7 @@ const Navbar = () => {
         setIsMobileMenuOpen(false);
     };
 
-    const { search, setSearch, setShowSearch } = useContext(ShopContext)
+    const { search, setSearch, setShowSearch, getCartCount } = useContext(ShopContext)
 
 
     return (
@@ -90,7 +91,7 @@ const Navbar = () => {
 
                     <NavLink to="/cart" className="text-gray-800 hover:text-gray-500 relative">
                         <FiShoppingCart className="h-6 w-6" />
-                        <p className='text-[10px] py-1 px-2 bg-black text-white rounded-[50%] absolute top-[-12px] right-[-10px]'>0</p>
+                        <p className='text-[10px] py-1 px-2 bg-black text-white rounded-[50%] absolute top-[-12px] right-[-10px]'>{getCartCount()}</p>
                     </NavLink>
                     <div className="group realtive">
                         <FiUser className="h-6 w-6" />
