@@ -88,8 +88,9 @@ const Navbar = () => {
 
                     <FiSearch className="h-6 w-6 text-gray-800 hover:text-gray-500 md:hidden" onClick={()=>setShowSearch(true)} />
 
-                    <NavLink to="/cart" className="text-gray-800 hover:text-gray-500">
+                    <NavLink to="/cart" className="text-gray-800 hover:text-gray-500 relative">
                         <FiShoppingCart className="h-6 w-6" />
+                        <p className='text-[10px] py-1 px-2 bg-black text-white rounded-[50%] absolute top-[-12px] right-[-10px]'>0</p>
                     </NavLink>
                     <div className="group realtive">
                         <FiUser className="h-6 w-6" />
