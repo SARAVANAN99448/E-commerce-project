@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         <>
             <div className='relative'>
-                <div className="w-[90%] mx-6 md:mx-16 bg-black rounded-3xl text-white px-4 py-8 md:py-12 my-12 absolute z-10">
+                <div className="w-[90%] mx-6 md:mx-16 bg-black rounded-3xl text-white px- py-8 md:py-12 my-12 absolute z-10">
                     <div className="max-w-6xl mx-auto md:flex items-center space-y-8 justify-between gap-24 px-8">
                         {/* Text Section */}
                         <h2 className="text-2xl md:text-4xl font-extrabold  ">
@@ -36,12 +36,12 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <footer className="bg-gray-200 w-full  text-black pt-40 pb-8 absolute top-44 z-0">
+                <footer className="bg-gray-200 w-full  text-black pt-44 md:pt-40 pb-8 absolute top-44 z-0">
                     <div className="max-w-6xl mx-auto px-4 pt-8 md:pt-4">
                         <div className="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0">
                             {/* Left Side: Logo and Social Links */}
                             <div className="md:w-1/4 mr-8">
-                                <h2 className="text-4xl font-black pb-2">SHOP.CO</h2>
+                                <h1 className="text-2xl md:text-4xl font-black pb-2">SHOP.CO</h1>
                                 <p className="text-sm mt-2 mb-4 pb-2">
                                     We have clothes that suit your style and which you’re proud to wear. From women to men.
                                 </p>

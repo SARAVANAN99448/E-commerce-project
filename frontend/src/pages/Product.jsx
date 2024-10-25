@@ -131,7 +131,7 @@ const Product = () => {
                 </div>
 
                 {/* -------- Product Info ---------- */}
-                <div className='flex-1'>
+                <div className='flex-1 text-[14px] md:text-[16px]'>
                     <h1 className='font-black text-2xl md:text-3xl mt-2'>{productData.name}</h1>
                     <p className='text-sm pt-4'><i className="mr-1 fa-solid fa-star text-yellow-400" ></i><i className="mr-1 fa-solid fa-star text-yellow-400" ></i><i className="mr-1 fa-solid fa-star text-yellow-400" ></i><i className="mr-1 fa-solid fa-star text-yellow-400" ></i><i className="mr-1 fa-solid fa-star-half text-yellow-400" ></i>4.5/5</p>
                     <p className='mt-5 text-3xl font-medium'>{currency}{productData.price}</p>
@@ -161,7 +161,7 @@ const Product = () => {
 
             {/* product details three sections */}
 
-            <div className="max-w-6xl mx-auto p-4 my-8">
+            <div className="max-w-6xl mx-auto p-4 my-8 text-[12px] md:text-[16px]">
                 {/* Navigation Tabs */}
                 <div className="flex justify-evenly border-b">
                     <button

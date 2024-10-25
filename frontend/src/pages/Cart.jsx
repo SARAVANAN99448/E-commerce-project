@@ -29,14 +29,14 @@ const Cart = () => {
     }, [cartItems])
 
     return (
-        <div className='border-t pt-14 w-[90%] m-auto'>
+        <div className='border-t pt-14 w-[90%] md:w-[80%] m-auto'>
 
             <div className='text-2xl mb-3'>
-                <Title text1={'YOUR CART'} />
+                <h1 className='font-black text-[20px] md:text-3xl pb-4'>YOUR CART</h1>
             </div>
 
             <div className='flex md:flex-1 flex-wrap gap-8 md:gap-12 justify-between'>
-                <div>
+                <div className='w-full md:w-[50%] '>
                     {cartData.map((item, index) => {
 
                         const productData = products.find((product) => product._id === item._id);
@@ -46,10 +46,10 @@ const Cart = () => {
                                 <div className='flex items-start gap-6'>
                                     <img className='w-16 sm:w-20' src={productData.image[0]} alt="" />
                                     <div>
-                                        <p className='text-xs sm:text-lg font-medium'>{productData.name}</p>
+                                        <p className='text-xs sm:text-lg font-bold'>{productData.name}</p>
+                                        <p className='text-[10px] pt-2'><span className='font-bold'>size: </span>{ item.size}</p>
                                         <div className='flex items-center gap-5 mt-2'>
                                             <p>{currency}{productData.price}</p>
-                                            <p className='px-2 sm:px-3 sm:py-1 border bg-slate-50'>{item.size}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -57,15 +57,16 @@ const Cart = () => {
                                 <RiDeleteBin6Fill onClick={() => updateQuantity(item._id, item.size, 0)} className='w-4 text-2xl mr-4 sm:w-5 cursor-pointer text-red-500' />
                             </div>
                         )
-
                     })}
                 </div>
 
-                <div className='flex my-20'>
-                    <div className='w-full  sm:w-[450px]'>
-                        <CartTotal />
-                        <div className='w-full text-end'>
-                            <button onClick={() => navigate('/place-order')} className='bg-black text-white text-sm my-8 px-8 py-3 flex items-center gap-4'>Go to Checkout <FiArrowRight /></button>
+                <div className='flex-1 w-[450px]'>
+                    <div className='w-full'>
+                        <div className=''>
+                            <CartTotal />
+                            <div className='w-full flex justify-end'>
+                                <button onClick={() => navigate('/place-order')} className='bg-black text-white text-sm w-full text-center my-8 px-8 py-4 flex justify-center rounded-full items-center gap-4'>Go to Checkout <FiArrowRight /></button>
+                            </div>
                         </div>
                     </div>
 
