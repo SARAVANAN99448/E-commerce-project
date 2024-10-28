@@ -23,6 +23,7 @@ const Login = () => {
         }
         catch (error) {
             console.error("Error logging", error)
+            alert("Login failed")
 
         }
     }

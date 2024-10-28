@@ -16,7 +16,7 @@ import Gym from "./pages/Gym"
 import Footer from "./components/Footer"
 import SearchBar from "./components/SearchBar"
 import Register from "./components/Register"
-
+import { ToastContainer } from "react-toastify"
 const App = () => {
     return (
         <div>
