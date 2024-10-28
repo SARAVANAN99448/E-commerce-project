@@ -76,7 +76,7 @@ const Review = () => {
         <>
             <section>
                 <div>
-                    <h1 className="text-4xl font-bold md:text-start md:ml-20 text-center">
+                    <h1 className="text-4xl font-black md:text-start md:ml-20 text-center">
                         OUR HAPPY CUSTOMERS
                     </h1>
                     <div className="m-10 ">

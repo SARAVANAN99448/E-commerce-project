@@ -20,6 +20,7 @@ import Register from "./components/Register"
 const App = () => {
     return (
         <div>
+            <ToastContainer/>
             <Discount />
             <Navbar />
             <SearchBar />

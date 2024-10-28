@@ -65,6 +65,7 @@ import gym7 from "./gym7.jpg"
 import gym8 from "./gym8.jpg"
 import gym9 from "./gym9.jpg"
 import gym10 from "./gym10.jpg"
+import stripe_logo from "./stripe_logo.png"
 
 export const assets = {
     hero_img,
@@ -134,6 +135,7 @@ export const assets = {
     gym8,
     gym9,
     gym10,
+    stripe_logo
 }
 
 export const products = [
