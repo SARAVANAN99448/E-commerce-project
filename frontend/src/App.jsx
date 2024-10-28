@@ -14,16 +14,19 @@ import Formal from "./pages/Formal"
 import Party from "./pages/Party"
 import Gym from "./pages/Gym"
 import Footer from "./components/Footer"
+import SearchBar from "./components/SearchBar"
+import Register from "./components/Register"
 
 const App = () => {
     return (
         <div>
             <Discount />
             <Navbar />
+            <SearchBar />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/on-sale" element={<Onsale />} />
-                <Route path="/product:productID" element={<Product />} />
+                <Route path="/product/:productID" element={<Product />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/place-order" element={<PlaceOrder />} />
@@ -32,6 +35,7 @@ const App = () => {
                 <Route path="/formal" element={<Formal />} />
                 <Route path="/party" element={<Party />} />
                 <Route path="/gym" element={<Gym />} />
+                <Route path="/register" element={<Register/>}></Route>
             </Routes>
             <Footer/>
         </div>

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FiSearch, FiShoppingCart, FiUser, FiMenu, FiX, FiChevronDown} from 'react-icons/fi';
+import { FiSearch, FiShoppingCart, FiUser, FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
+import { ShopContext } from '../context/ShopContext';
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -15,6 +16,8 @@ const Navbar = () => {
         setIsMobileMenuOpen(false);
     };
 
+    const { search, setSearch, setShowSearch } = useContext(ShopContext)
+
 
     return (
         <nav className="bg-white shadow-sm sticky top-0 z-50">
@@ -27,15 +30,15 @@ const Navbar = () => {
                 </div>
 
                 {/* Logo */}
-                <div className="text-3xl font-bold tracking-tight font-integral">
+                <div className="text-3xl font-black tracking-tight font-integral">
                     <NavLink to="/">
-                    SHOP.CO 
-                    </NavLink>                    
+                        SHOP.CO
+                    </NavLink>
                 </div>
 
                 {/* Desktop Menu (hidden on mobile) */}
                 <div className="hidden md:flex flex-grow mx-8 items-center justify-center space-x-10 ">
-                <div className="group realtive">
+                    <div className="group realtive">
                         <div className='flex items-center gap-1'>
                             <div>
                                 Shop
@@ -64,31 +67,27 @@ const Navbar = () => {
                     <NavLink to="/on-sale" className="text-gray-800 hover:underline">
                         On Sale
                     </NavLink>
-                    <NavLink to="/new-arrivals" className="text-gray-800 hover:underline">
+                    <a href='#newArrival' className="text-gray-800 hover:underline">
                         New Arrivals
-                    </NavLink>
-                    <NavLink to="/brands" className="text-gray-800 hover:underline">
+                    </a>
+                    <a href='#Brand' className="text-gray-800 hover:underline">
                         Brands
-                    </NavLink>
+                    </a>
                 </div>
 
                 {/* Search input */}
-                <div className="hidden md:flex flex-grow-0 w-1/3 pr-4 relative">
-                    <input
-                        type="text"
-                        placeholder="Search for products..."
-                        className="w-full h-10 pl-10 pr-4 rounded-full bg-gray-100 text-gray-700 focus:outline-none"
-                    />
-                    <span className="absolute left-3 top-2 text-gray-400">
-                        <FiSearch className="h-6 w-6" />
-                    </span>
+                <div className='flex '>
+                    <div className='border border-none px-4 py-2 rounded-full hidden md:flex items-center  gap-4 bg-gray-200 '>
+                        <FiSearch />
+                        <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} className='outline-none bg-inherit pr-36' placeholder='Search' />
+                    </div>
                 </div>
 
                 {/* Cart and  icons */}
                 <div className="flex items-center space-x-6">
-                    <NavLink to="/onsale" className="text-gray-800 hover:text-gray-500 md:hidden">
-                        <FiSearch className="h-6 w-6" />
-                    </NavLink>
+
+                    <FiSearch className="h-6 w-6 text-gray-800 hover:text-gray-500 md:hidden" onClick={()=>setShowSearch(true)} />
+
                     <NavLink to="/cart" className="text-gray-800 hover:text-gray-500">
                         <FiShoppingCart className="h-6 w-6" />
                     </NavLink>
@@ -153,14 +152,14 @@ const Navbar = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/new-arrivals" className="block text-gray-700 hover:underline">
+                        <a href='#newArrival' className="block text-gray-700 hover:underline">
                             New Arrivals
-                        </NavLink>
+                        </a>
                     </li>
                     <li>
-                        <NavLink to="/brands" className="block text-gray-700 hover:underline">
+                        <a href='#Brand' className="block text-gray-700 hover:underline">
                             Brands
-                        </NavLink>
+                        </a>
                     </li>
                 </ul>
             </div>
