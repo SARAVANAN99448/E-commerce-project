@@ -5,17 +5,19 @@ import Breadcrumb from '../components/Breadcrumb';
 
 const Gym = () => {
 
-    const { products } = useContext(ShopContext);
+    const { products, search } = useContext(ShopContext);
     const [gymProduct, setGymProduct] = useState([]);
 
     useEffect(() => {
-        const categoryGym = products.filter((item) => item.category === "gym")
+        const searchQuery = typeof search === "string" ? search.toLowerCase() : "";
+        const categoryGym = products.filter((item) => item.category === "gym" &&
+            item.name && item.name.toLowerCase().includes(searchQuery))
         setGymProduct(categoryGym.slice(0, 9))
-    }, [products])
+    }, [products,search])
 
     return (
         <div className='w-full md:w-[80%] m-auto my-10'>
-            <Breadcrumb/>
+            <Breadcrumb />
             <div>
                 <h1 className='text-3xl pl-4 md:pl-20 py-8 font-bold'>Gym</h1>
             </div>

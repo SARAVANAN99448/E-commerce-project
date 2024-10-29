@@ -8,9 +8,10 @@ export const ShopContext = createContext();
 const ShopContextProvider = (props) => {
 
     const currency = "$";
-    const delivery_fee = 10
-    const [showSearch, setShowSearch] = useState(false)
+    const delivery_fee = 10;
+    const [showSearch, setShowSearch] = useState(false);
     const [cartItems, setCartItems] = useState({});
+    const [search,setSearch] = useState();
     const navigate = useNavigate();
 
     const addToCart = async (itemId, size) => {
@@ -80,7 +81,7 @@ const ShopContextProvider = (props) => {
         showSearch, setShowSearch,
         cartItems, addToCart, getCartCount,
         updateQuantity, getCartAmount,
-        navigate
+        navigate,search,setSearch
     }
 
     return(

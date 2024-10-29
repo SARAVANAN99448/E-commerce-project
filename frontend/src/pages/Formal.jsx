@@ -5,17 +5,19 @@ import Breadcrumb from '../components/Breadcrumb';
 
 const Formal = () => {
 
-    const { products } = useContext(ShopContext);
+    const { products, search } = useContext(ShopContext);
     const [formalProduct, setFormalProduct] = useState([]);
 
     useEffect(() => {
-        const categoryFormal = products.filter((item) => item.category === "formal")
+        const searchQuery = typeof search === "string" ? search.toLowerCase() : "";
+        const categoryFormal = products.filter((item) => item.category === "formal"
+            && item.name && item.name.toLowerCase().includes(searchQuery))
         setFormalProduct(categoryFormal.slice(0, 9))
-    }, [products])
+    }, [products,search])
 
     return (
         <div className='w-full md:w-[80%] m-auto my-10'>
-            <Breadcrumb/>
+            <Breadcrumb />
             <div>
                 <h1 className='text-3xl pl-4 md:pl-20 py-8 font-bold'>Formal</h1>
             </div>

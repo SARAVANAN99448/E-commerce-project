@@ -144,7 +144,7 @@ export const products = [
         name: "T-SHIRT WITH TAPE DETAILS",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 120,
-        image: [product1,product1,product1],
+        image: [product1, product1, product1],
         category: "",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
@@ -158,7 +158,7 @@ export const products = [
         name: "Skinny Fit Jeans",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 240,
-        image: [product2,product2,product2],
+        image: [product2, product2, product2],
         category: "",
         sizes: ["Small", "Medium", "Large", "X-Large"],
         date: 8392834757123,
@@ -353,7 +353,7 @@ export const products = [
         discount: "-20%",
         pre_price: "$232",
         rating: "5.0"
-    }, 
+    },
 
     // formal products
 
@@ -457,7 +457,7 @@ export const products = [
     },
     {
         _id: "aaaaduytyyiuz",
-        name: "COURAGE GRAPHIC T-SHIRT",
+        name: "BROWN SHIRT",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 599,
         image: [formal8],
@@ -572,7 +572,7 @@ export const products = [
     },
     {
         _id: "afdasfaaaduyiuz",
-        name: "COURAGE GRAPHIC T-SHIRT",
+        name: "WHITE COURT ",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 300,
         image: [party6],
@@ -743,7 +743,7 @@ export const products = [
     },
     {
         _id: "aaaieibaduyiuz",
-        name: "COURAGE GRAPHIC T-SHIRT",
+        name: "PINK T-SHIRT",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 820,
         image: [gym8],
@@ -783,5 +783,5 @@ export const products = [
         pre_price: "",
         rating: "3.0"
     },
-    
+
 ]
