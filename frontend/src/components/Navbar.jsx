@@ -2,10 +2,11 @@ import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FiSearch, FiShoppingCart, FiUser, FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
 import { ShopContext } from '../context/ShopContext';
+import {useNavigate} from "react-router-dom"
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+    const navigate = useNavigate()
 
     // Toggle mobile menu
     const handleMobileMenuToggle = () => {
@@ -16,7 +17,13 @@ const Navbar = () => {
     const handleCloseMobileMenu = () => {
         setIsMobileMenuOpen(false);
     };
+    const handlelogout = () => {
+        localStorage.removeItem("token")
+        alert("Logout Successfully")
+        navigate("/register")
 
+
+    }
     const { search, setSearch, setShowSearch, getCartCount } = useContext(ShopContext)
 
 
@@ -87,7 +94,7 @@ const Navbar = () => {
                 {/* Cart and  icons */}
                 <div className="flex items-center space-x-6">
 
-                    <FiSearch className="h-6 w-6 text-gray-800 hover:text-gray-500 md:hidden" onClick={()=>setShowSearch(true)} />
+                    <FiSearch className="h-6 w-6 text-gray-800 hover:text-gray-500 md:hidden" onClick={() => setShowSearch(true)} />
 
                     <NavLink to="/cart" className="text-gray-800 hover:text-gray-500 relative">
                         <FiShoppingCart className="h-6 w-6" />
@@ -99,7 +106,7 @@ const Navbar = () => {
                             <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded'>
                                 <p className='cursor-pointer hover:text-black'>My profile</p>
                                 <p className='cursor-pointer hover:text-black'>Orders</p>
-                                <p className='cursor-pointer hover:text-black'>Logout</p>
+                                <p className='cursor-pointer hover:text-black' onClick={handlelogout}>Logout</p>
                             </div>
                         </div>
                     </div>
