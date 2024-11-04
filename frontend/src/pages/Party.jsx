@@ -3,19 +3,21 @@ import { ShopContext } from '../context/ShopContext'
 import ProductItem from '../components/ProductItem'
 import Breadcrumb from '../components/Breadcrumb';
 
-const Party= () => {
+const Party = () => {
 
-    const { products } = useContext(ShopContext);
+    const { products, search } = useContext(ShopContext);
     const [partyProduct, setPartyProduct] = useState([]);
 
     useEffect(() => {
-        const categoryParty = products.filter((item) => item.category === "party")
+        const searchQuery = typeof search === "string" ? search.toLowerCase() : ""
+        const categoryParty = products.filter((item) => item.category === "party" &&
+            item.name && item.name.toLowerCase().includes(searchQuery))
         setPartyProduct(categoryParty.slice(0, 9))
-    }, [products])
+    }, [products, search])
 
     return (
         <div className='w-full md:w-[80%] m-auto my-10'>
-            <Breadcrumb/>
+            <Breadcrumb />
             <div>
                 <h1 className='text-3xl pl-4 md:pl-20 py-8 font-bold'>Party</h1>
             </div>

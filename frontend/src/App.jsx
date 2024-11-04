@@ -15,9 +15,8 @@ import Party from "./pages/Party"
 import Gym from "./pages/Gym"
 import Footer from "./components/Footer"
 import SearchBar from "./components/SearchBar"
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-
+import Register from "./components/Register"
+import { ToastContainer } from "react-toastify"
 const App = () => {
     return (
         <div>
@@ -37,6 +36,7 @@ const App = () => {
                 <Route path="/formal" element={<Formal />} />
                 <Route path="/party" element={<Party />} />
                 <Route path="/gym" element={<Gym />} />
+                <Route path="/register" element={<Register/>}></Route>
             </Routes>
             <Footer/>
         </div>

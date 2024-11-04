@@ -1,6 +1,6 @@
 import React from 'react'
 import { assets } from "../assets/images/assets"
-
+import { Link } from 'react-router-dom'
 const HeroSection = () => {
     return (
         <>
@@ -16,7 +16,7 @@ const HeroSection = () => {
                         Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
                     </p>
                     <div>
-                        <button className='border border-black px-16 py-4 bg-black text-white rounded-full'>Shop Now</button>
+                        <button className='border border-black px-16 py-4 bg-black text-white rounded-full'><Link to={"/on-sale"}>Shop Now</Link></button>
                     </div>
                     <div className='flex flex-wrap gap-6 font-integral'>
                         <p><span className='text-4xl font-bold'>200+</span> <br />International Brands</p>
@@ -33,7 +33,7 @@ const HeroSection = () => {
                     <p className='text-gray-700'>
                         Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
                     </p>
-                        <button className='border border-black px-16 py-4 bg-black text-white rounded-full'>Shop Now</button>
+                        <button className='border border-black px-16 py-4 bg-black text-white rounded-full'><Link to={"/on-sale"}>Shop Now</Link></button>
                     <div className='flex flex-wrap gap-6 font-integral justify-center'>
                         <p><span className='text-2xl font-bold'>200+</span> <br />International Brands</p>
                         <p><span className='text-2xl font-bold'>2,000+</span> <br />Hight Quality Products</p>

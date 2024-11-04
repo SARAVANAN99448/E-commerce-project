@@ -5,15 +5,18 @@ import Breadcrumb from '../components/Breadcrumb';
 
 const Onsale = () => {
 
-    const { products } = useContext(ShopContext);
+    const { products, search } = useContext(ShopContext);
     const [onsaleProducts, setOnsaleProducts] = useState([]);
 
-    
-    
-
     useEffect(() => {
-        setOnsaleProducts(products.slice(0, 9))
-    }, [products])
+        const searchQuery = typeof search === "string" ? search.toLowerCase() : ""
+        // search fuctionality
+        const filteredProducts = products.filter((item) => {
+            return item.name.toLowerCase().includes(searchQuery);
+        }).slice(0, 9);
+
+        setOnsaleProducts(filteredProducts)
+    }, [products, search])
 
 
     return (

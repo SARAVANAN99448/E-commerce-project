@@ -79,10 +79,10 @@ const Review = () => {
                     <h1 className="text-4xl font-black md:text-start md:ml-20 text-center">
                         OUR HAPPY CUSTOMERS
                     </h1>
-                    <div className="m-10">
+                    <div className="m-10 ">
                         <Slider {...settings}>
                             {data.map((data, index) => (
-                                <div className="border p-5 md:ml-10 rounded-xl" key={index}>
+                                <div className="border p-5 md:ml-10 rounded-xl w-96 h-52" key={index}>
                                     <div>
                                         <h1 className="mb-2">{data.star}</h1>
                                         <div className="flex gap-2">

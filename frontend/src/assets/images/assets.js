@@ -7,7 +7,7 @@ import product4 from './product4.png'
 import product5 from './product5.png'
 import product6 from './product6.png'
 import product7 from './product7.png'
-import product8 from './product8.png'
+import product8 from './product9.png'
 import product9 from './product9.png'
 import product10 from './product10.png'
 import product11 from './product11.png'
@@ -353,7 +353,7 @@ export const products = [
         discount: "-20%",
         pre_price: "$232",
         rating: "5.0"
-    }, 
+    },
 
     // formal products
 
@@ -457,7 +457,7 @@ export const products = [
     },
     {
         _id: "aaaaduytyyiuz",
-        name: "COURAGE GRAPHIC T-SHIRT",
+        name: "BROWN SHIRT",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 599,
         image: [formal8],
@@ -572,7 +572,7 @@ export const products = [
     },
     {
         _id: "afdasfaaaduyiuz",
-        name: "COURAGE GRAPHIC T-SHIRT",
+        name: "WHITE COURT ",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 300,
         image: [party6],
@@ -743,7 +743,7 @@ export const products = [
     },
     {
         _id: "aaaieibaduyiuz",
-        name: "COURAGE GRAPHIC T-SHIRT",
+        name: "PINK T-SHIRT",
         description: "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.",
         price: 820,
         image: [gym8],
@@ -783,6 +783,5 @@ export const products = [
         pre_price: "",
         rating: "3.0"
     },
-    
-]
 
+]

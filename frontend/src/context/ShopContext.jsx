@@ -7,12 +7,13 @@ export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
 
-    const currency = "$";
+    const currency = "$"
     const delivery_fee = 10
     const backendUrl = import.meta.env.VITE_BACKEND_URL
     const [showSearch, setShowSearch] = useState(false)
     const [cartItems, setCartItems] = useState({});
     const [products, setProducts] = useState([])
+
     const navigate = useNavigate();
 
     const addToCart = async (itemId, size) => {
@@ -105,8 +106,9 @@ const ShopContextProvider = (props) => {
         showSearch, setShowSearch,
         cartItems, addToCart, getCartCount,
         updateQuantity, getCartAmount,
-        navigate, backendUrl
+        navigate, backendUrl, navigate,search,setSearch
     }
+
 
     return(
         <ShopContext.Provider value={value}>
