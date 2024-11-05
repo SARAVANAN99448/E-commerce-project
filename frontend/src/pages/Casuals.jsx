@@ -29,7 +29,7 @@ const Casuals = () => {
 
                     {
                         casualProduct.map((item, index) => (
-                            <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price} />
+                            <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price} pre_price={item.pre_price} discount={item.discount} rating={item.rating}/>
                         ))
                     }
                 </div>

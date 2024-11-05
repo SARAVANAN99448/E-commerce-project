@@ -26,7 +26,7 @@ const Formal = () => {
                 <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4 gap-y-6 p-4 lg:pl-20'>
                     {
                         formalProduct.map((item, index) => (
-                            <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price} />
+                            <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price}pre_price={item.pre_price} discount={item.discount} rating={item.rating} />
                         ))
                     }
                 </div>
