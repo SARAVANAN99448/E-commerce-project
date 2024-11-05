@@ -14,7 +14,6 @@ const Onsale = () => {
         const filteredProducts = products.filter((item) => {
             return item.name.toLowerCase().includes(searchQuery);
         }).slice(0, 9);
-
         setOnsaleProducts(filteredProducts)
     }, [products, search])
 
