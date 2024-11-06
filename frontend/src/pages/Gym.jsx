@@ -8,17 +8,17 @@ const Gym = () => {
     const { products, search } = useContext(ShopContext);
     const [gymProduct, setGymProduct] = useState([]);
 
-    // useEffect(() => {
-    //     const searchQuery = typeof search === "string" ? search.toLowerCase() : "";
-    //     const categoryGym = products.filter((item) => item.category === "gym" &&
-    //         item.name && item.name.toLowerCase().includes(searchQuery))
-    //     setGymProduct(categoryGym.slice(0, 9))
-    // }, [products,search])
+    useEffect(() => {
+        const searchQuery = typeof search === "string" ? search.toLowerCase() : "";
+        const categoryGym = products.filter((item) => item.category === "Gym" &&
+            item.name && item.name.toLowerCase().includes(searchQuery))
+        setGymProduct(categoryGym.slice(0, 9))
+    }, [products,search])
 
-    useEffect(() =>{
-        const categoryGym = products.filter(product => product.category === "Gym");
-        setGymProduct(categoryGym.slice(0,9));
-    },[products])
+    // useEffect(() =>{
+    //     const categoryGym = products.filter(product => product.category === "Gym");
+    //     setGymProduct(categoryGym.slice(0,9));
+    // },[products])
 
     return (
         <div className='w-full md:w-[80%] m-auto my-10'>

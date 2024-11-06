@@ -8,17 +8,17 @@ const Party = () => {
     const { products, search } = useContext(ShopContext);
     const [partyProduct, setPartyProduct] = useState([]);
 
-    // useEffect(() => {
-    //     const searchQuery = typeof search === "string" ? search.toLowerCase() : ""
-    //     const categoryParty = products.filter((item) => item.category === "party" &&
-    //         item.name && item.name.toLowerCase().includes(searchQuery))
-    //     setPartyProduct(categoryParty.slice(0, 9))
-    // }, [products, search])
-
     useEffect(() => {
-        const categoryParty = products.filter(product => product.category === "Party");
-        setPartyProduct(categoryParty.slice(0, 9));
+        const searchQuery = typeof search === "string" ? search.toLowerCase() : ""
+        const categoryParty = products.filter((item) => item.category === "Party" &&
+            item.name && item.name.toLowerCase().includes(searchQuery))
+        setPartyProduct(categoryParty.slice(0, 9))
     }, [products, search])
+
+    // useEffect(() => {
+    //     const categoryParty = products.filter(product => product.category === "Party");
+    //     setPartyProduct(categoryParty.slice(0, 9));
+    // }, [products, search])
 
     return (
         <div className='w-full md:w-[80%] m-auto my-10'>
