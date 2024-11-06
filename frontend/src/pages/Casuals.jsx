@@ -8,13 +8,18 @@ const Casuals = () => {
     const { products, search } = useContext(ShopContext);
     const [casualProduct, setCasualProduct] = useState([]);
 
-    useEffect(() => {
-        const searchQuery = typeof search === "string" ? search.toLowerCase() : "";
-        const categoryCasual = products.filter((item) => item.category === "casual" && item.name &&
-            item.name.toLowerCase().includes(searchQuery)
-        )
-        setCasualProduct(categoryCasual.slice(0, 9))
-    }, [products,search])
+    // useEffect(() => {
+    //     const searchQuery = typeof search === "string" ? search.toLowerCase() : "";
+    //     const categoryCasual = products.filter((item) => item.category === "casual" && item.name &&
+    //         item.name.toLowerCase().includes(searchQuery)
+    //     )
+    //     setCasualProduct(categoryCasual.slice(0, 9))
+    // }, [products,search])
+
+    useEffect(() =>{
+        const categoryCasual = products.filter(product => product.category === "Casual");
+        setCasualProduct(categoryCasual.slice(0,9));
+    },[products])
 
 
     return (

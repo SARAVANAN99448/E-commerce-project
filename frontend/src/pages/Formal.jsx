@@ -8,12 +8,17 @@ const Formal = () => {
     const { products, search } = useContext(ShopContext);
     const [formalProduct, setFormalProduct] = useState([]);
 
-    useEffect(() => {
-        const searchQuery = typeof search === "string" ? search.toLowerCase() : "";
-        const categoryFormal = products.filter((item) => item.category === "formal"
-            && item.name && item.name.toLowerCase().includes(searchQuery))
-        setFormalProduct(categoryFormal.slice(0, 9))
-    }, [products,search])
+    // useEffect(() => {
+    //     const searchQuery = typeof search === "string" ? search.toLowerCase() : "";
+    //     const categoryFormal = products.filter((item) => item.category === "formal"
+    //         && item.name && item.name.toLowerCase().includes(searchQuery))
+    //     setFormalProduct(categoryFormal.slice(0, 9))        
+    // }, [products,search])
+
+    useEffect(() =>{
+        const categoryFormal = products.filter(product => product.category === "Formal");
+        setFormalProduct(categoryFormal.slice(0,9));
+    },[products])
 
     return (
         <div className='w-full md:w-[80%] m-auto my-10'>

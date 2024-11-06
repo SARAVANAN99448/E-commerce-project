@@ -8,11 +8,16 @@ const Party = () => {
     const { products, search } = useContext(ShopContext);
     const [partyProduct, setPartyProduct] = useState([]);
 
+    // useEffect(() => {
+    //     const searchQuery = typeof search === "string" ? search.toLowerCase() : ""
+    //     const categoryParty = products.filter((item) => item.category === "party" &&
+    //         item.name && item.name.toLowerCase().includes(searchQuery))
+    //     setPartyProduct(categoryParty.slice(0, 9))
+    // }, [products, search])
+
     useEffect(() => {
-        const searchQuery = typeof search === "string" ? search.toLowerCase() : ""
-        const categoryParty = products.filter((item) => item.category === "party" &&
-            item.name && item.name.toLowerCase().includes(searchQuery))
-        setPartyProduct(categoryParty.slice(0, 9))
+        const categoryParty = products.filter(product => product.category === "Party");
+        setPartyProduct(categoryParty.slice(0, 9));
     }, [products, search])
 
     return (
@@ -26,7 +31,7 @@ const Party = () => {
                 <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-4 gap-y-6 p-4 lg:pl-20'>
                     {
                         partyProduct.map((item, index) => (
-                            <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price} pre_price={item.pre_price} discount={item.discount} rating={item.rating}/>
+                            <ProductItem key={index} id={item._id} image={item.image} name={item.name} price={item.price} pre_price={item.pre_price} discount={item.discount} rating={item.rating} />
                         ))
                     }
                 </div>
