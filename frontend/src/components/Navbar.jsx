@@ -2,11 +2,19 @@ import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FiSearch, FiShoppingCart, FiUser, FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
 import { ShopContext } from '../context/ShopContext';
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const navigate = useNavigate()
+
+    const logout = () => {
+        navigate('/login')
+        localStorage.removeItem('token')
+        setToken('')
+        setCartItems({})
+    }
+
 
     // Toggle mobile menu
     const handleMobileMenuToggle = () => {
@@ -17,14 +25,9 @@ const Navbar = () => {
     const handleCloseMobileMenu = () => {
         setIsMobileMenuOpen(false);
     };
-    const handlelogout = () => {
-        localStorage.removeItem("token")
-        alert("Logout Successfully")
-        navigate("/register")
 
+    const { search, setSearch, setShowSearch, getCartCount, token, setToken, setCartItems } = useContext(ShopContext)
 
-    }
-    const { search, setSearch, setShowSearch, getCartCount } = useContext(ShopContext)
 
 
     return (
@@ -87,30 +90,36 @@ const Navbar = () => {
                 <div className='flex '>
                     <div className='border border-none px-4 py-2 rounded-full hidden md:flex items-center  gap-4 bg-gray-200 '>
                         <FiSearch />
-                        <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} className='outline-none bg-inherit pr-36' placeholder='Search' />
+                        <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} onClick={() => navigate('/on-sale')} className='outline-none bg-inherit pr-36' placeholder='Search' />
                     </div>
                 </div>
 
                 {/* Cart and  icons */}
                 <div className="flex items-center space-x-6">
 
-                    <FiSearch className="h-6 w-6 text-gray-800 hover:text-gray-500 md:hidden" onClick={() => setShowSearch(true)} />
+                    <FiSearch className="h-6 w-6 text-gray-800 hover:text-gray-500 md:hidden" onClick={() => { setShowSearch(true); navigate('/on-sale') }} />
 
                     <NavLink to="/cart" className="text-gray-800 hover:text-gray-500 relative">
                         <FiShoppingCart className="h-6 w-6" />
                         <p className='text-[10px] py-1 px-2 bg-black text-white rounded-[50%] absolute top-[-12px] right-[-10px]'>{getCartCount()}</p>
                     </NavLink>
                     <div className="group realtive">
-                        <FiUser className="h-6 w-6" />
-                        <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
-                            <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded'>
-                                <p className='cursor-pointer hover:text-black'>My profile</p>
-                                <p className='cursor-pointer hover:text-black'>Orders</p>
-                                <p className='cursor-pointer hover:text-black' onClick={handlelogout}>Logout</p>
+                        <FiUser onClick={() => token ? null : navigate('/login')} className="h-6 w-6" />
+                        {token &&
+                            <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
+                                <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded'>
+                                    <p className='cursor-pointer hover:text-black'>My profile</p>
+                                    <p onClick={() => navigate('/orders')} className='cursor-pointer hover:text-black'>Orders</p>
+                                    <p onClick={logout} className='cursor-pointer hover:text-black'>Logout</p>
+                                </div>
                             </div>
-                        </div>
+                        }
                     </div>
                 </div>
+
+
+
+
             </div>
 
             {/* Mobile Menu Overlay */}

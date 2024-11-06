@@ -13,20 +13,23 @@ const Cart = () => {
     const [cartData, setCartData] = useState([]);
 
     useEffect(() => {
-        const tempData = []
-        for (const items in cartItems) {
-            for (const item in cartItems[items]) {
-                if (cartItems[items][item] > 0) {
-                    tempData.push({
-                        _id: items,
-                        size: item,
-                        quantity: cartItems[items][item]
-                    })
+
+        if (products.length > 0) {
+            const tempData = [];
+            for (const items in cartItems) {
+                for (const item in cartItems[items]) {
+                    if (cartItems[items][item] > 0) {
+                        tempData.push({
+                            _id: items,
+                            size: item,
+                            quantity: cartItems[items][item]
+                        })
+                    }
                 }
             }
+            setCartData(tempData);
         }
-        setCartData(tempData)
-    }, [cartItems])
+    }, [cartItems, products])
 
     return (
         <div className='border-t pt-14 w-[90%] md:w-[80%] m-auto'>
@@ -47,7 +50,7 @@ const Cart = () => {
                                     <img className='w-16 sm:w-20' src={productData.image[0]} alt="" />
                                     <div>
                                         <p className='text-xs sm:text-lg font-bold'>{productData.name}</p>
-                                        <p className='text-[10px] pt-2'><span className='font-bold'>size: </span>{ item.size}</p>
+                                        <p className='text-[10px] pt-2'><span className='font-bold'>size: </span>{item.size}</p>
                                         <div className='flex items-center gap-5 mt-2'>
                                             <p>{currency}{productData.price}</p>
                                         </div>
