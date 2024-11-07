@@ -15,10 +15,6 @@ const Party = () => {
         setPartyProduct(categoryParty.slice(0, 9))
     }, [products, search])
 
-    // useEffect(() => {
-    //     const categoryParty = products.filter(product => product.category === "Party");
-    //     setPartyProduct(categoryParty.slice(0, 9));
-    // }, [products, search])
 
     return (
         <div className='w-full md:w-[80%] m-auto my-10'>

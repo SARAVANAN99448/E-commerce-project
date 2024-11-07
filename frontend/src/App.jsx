@@ -15,7 +15,7 @@ import Party from "./pages/Party"
 import Gym from "./pages/Gym"
 import Footer from "./components/Footer"
 import SearchBar from "./components/SearchBar"
-// import Register from "./components/Register"
+import Verify from './pages/Verify'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
@@ -37,7 +37,7 @@ const App = () => {
                 <Route path="/formal" element={<Formal />} />
                 <Route path="/party" element={<Party />} />
                 <Route path="/gym" element={<Gym />} />
-                {/* <Route path="/register" element={<Register/>}></Route> */}
+                <Route path='/verify' element={<Verify />} />
             </Routes>
             <Footer/>
         </div>

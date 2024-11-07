@@ -17,10 +17,6 @@ const Casuals = () => {
     }, [products,search])
     
 
-    // useEffect(() =>{
-    //     const categoryCasual = products.filter(product => product.category === "Casual");
-    //     setCasualProduct(categoryCasual.slice(0,9));
-    // },[products])
 
 
     return (

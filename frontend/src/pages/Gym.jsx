@@ -15,11 +15,6 @@ const Gym = () => {
         setGymProduct(categoryGym.slice(0, 9))
     }, [products,search])
 
-    // useEffect(() =>{
-    //     const categoryGym = products.filter(product => product.category === "Gym");
-    //     setGymProduct(categoryGym.slice(0,9));
-    // },[products])
-
     return (
         <div className='w-full md:w-[80%] m-auto my-10'>
             <Breadcrumb />

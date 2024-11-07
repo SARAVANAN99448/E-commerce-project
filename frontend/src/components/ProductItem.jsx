@@ -12,7 +12,7 @@ const ProductItem = ({ id, image, name, price, pre_price, discount, rating }) =>
     return (
         <div>
 
-            <Link to={`/product/${id}`} className='text-gray-700 cursor-pointer'>
+            <Link onClick={()=>scrollTo(0,0)} to={`/product/${id}`} className='text-gray-700 cursor-pointer'>
                 <div className='overflow-hidden'>
                     <img className='w-60 rounded-3xl hover:scale-110 transition ease-in-out' src={image[0]} alt="" />
                 </div>
