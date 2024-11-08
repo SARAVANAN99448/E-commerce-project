@@ -66,11 +66,11 @@ const faqs = [
 const Product = () => {
 
     const { productID } = useParams()
-
     const { products, currency, addToCart } = useContext(ShopContext);
     const [productData, setProductData] = useState(false);
     const [image, setImage] = useState('')
     const [size, setSize] = useState('')
+    const [quantity, setQuantity] = useState(1);
 
     const fetchProductData = async () => {
 
@@ -146,10 +146,10 @@ const Product = () => {
                     </div>
                     <hr className='my-8 sm:w-4/5' />
                     <div className='flex justify-between md:mr-32'>
-                        <div className='flex  border-none px-6 py-2 bg-gray-200 rounded-full text-2xl items-center gap-8 '>
-                            <p>-</p>
-                            <p>1</p>
-                            <p>+</p>
+                        <div className='flex border-none px-6 py-2 bg-gray-200 rounded-full text-2xl items-center gap-8'>
+                            <p onClick={() => setQuantity(prev => Math.max(1, prev - 1))} className='cursor-pointer'>-</p> {/* Decrease quantity */}
+                            <p>{quantity}</p> {/* Display current quantity */}
+                            <p onClick={() => setQuantity(prev => prev + 1)} className='cursor-pointer'>+</p> {/* Increase quantity */}
                         </div>
                         <div>
                             <button onClick={() => addToCart(productData._id, size)} className='bg-black text-white px-12 md:px-24 rounded-full py-3 text-sm active:bg-gray-700'>ADD TO CART</button>

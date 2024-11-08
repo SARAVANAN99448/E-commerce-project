@@ -18,17 +18,17 @@ const Onsale = () => {
         // search fuctionality
         let filteredProducts = products.filter((item) => {
             return item.name.toLowerCase().includes(searchQuery);
-            
+
         })
-          // Sort products based on sortOrder
-          if (sortOrder === "lowToHigh") {
+        // Sort products based on sortOrder
+        if (sortOrder === "lowToHigh") {
             filteredProducts = filteredProducts.sort((a, b) => a.price - b.price);
-        } else if (sortOrder === "highToLow") {
+        }
+        else if (sortOrder === "highToLow") {
             filteredProducts = filteredProducts.sort((a, b) => b.price - a.price);
         }
-        filteredProducts = filteredProducts;
         setOnsaleProducts(filteredProducts);
-    }, [products, search,sortOrder])
+    }, [products, search, sortOrder])
 
 
     return (
@@ -42,7 +42,7 @@ const Onsale = () => {
                     <div className='flex text-lg gap-4'>
                         <div className='flex gap-4'>
                             <p className='text-gray-400'>Showing 1-9 of 100 products </p>
-                            <select name="" id="" onChange={handleSortChange} value={sortOrder}>
+                            <select className='cursor-pointer' name="" id="" onChange={handleSortChange} value={sortOrder}>
                                 <option value="most-popular">sort by: Most Popular</option>
                                 <option value="lowToHigh">sort by: Low to High</option>
                                 <option value="highToLow">sort by: High to Low</option>

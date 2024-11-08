@@ -25,7 +25,7 @@
 //             const { token } = response.data;
 //             localStorage.setItem("token", token);
 //             alert("Registration successfull")
-//             navigate("/login")
+//             navigate("")
 //         }
 //         catch (error) {
 //             console.error("Error registering", error)
