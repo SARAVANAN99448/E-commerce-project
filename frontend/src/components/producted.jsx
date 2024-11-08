@@ -13,7 +13,7 @@ const producted = () => {
                 return;
             }
             try{
-                const response = await axios.get("http://localhost:4000/producted",{
+                const response = await axios.get("https://e-commerce-project-ezg4.onrender.com/producted",{
                     headers:{Authorization:`Bearer ${token}`}
                 })
                 setmaessage(response.data);

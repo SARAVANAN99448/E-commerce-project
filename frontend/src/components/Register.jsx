@@ -21,7 +21,7 @@
 //         //     setusererror(true)
 //         // }
 //         try {
-//             const response = await axios.post("http://localhost:4000/register", { username, password })
+//             const response = await axios.post("https://e-commerce-project-ezg4.onrender.com/register", { username, password })
 //             const { token } = response.data;
 //             localStorage.setItem("token", token);
 //             alert("Registration successfull")
